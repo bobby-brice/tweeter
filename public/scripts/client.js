@@ -41,10 +41,10 @@ const renderTweets = function(tweets) {
 };
 
 const createTweetElement = function(index, tweet) {
-  console.log("index: ", index, "tweet: ", tweet);
+  
   let $tweet = `
     
-      <article>
+      <article class="user-tweets">
 
         <header class="tweet-header">
           <div class="header-top">

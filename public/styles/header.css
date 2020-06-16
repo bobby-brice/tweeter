@@ -23,13 +23,19 @@
 
 .tweet-header img {
   height: 60px;
+  padding-left: 10px;
 
 }
 
 .handle {
+  padding-right: 10px;
   visibility: hidden;
 }
 
-#tweet-container:hover .handle {
+.user-tweets:hover .handle {
   visibility: visible;
+}
+
+.user-tweets p {
+  padding-left: 10px;
 }
