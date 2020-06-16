@@ -1,0 +1,40 @@
+ form button {
+   background-color: #4056A1;
+   color: #FFF;
+   font-family: 'Bungee';
+   padding: 5px 10px 5px 10px;
+   margin: 10px;
+ }
+
+ form output {
+   font-family: 'Bungee';
+   padding: 10px;
+ }
+
+ textarea {
+   font-size: 1rem;
+   outline: none;
+   resize: none;
+   overflow: auto;
+   border-bottom: 2px solid black;
+   border-top: none;
+   border-right: none;
+   border-left: none;
+   background-color: transparent;
+   height: 40px;
+   margin: 10px;
+ }
+
+ .form-top {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .below-form {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .new-tweet {
+   width: 100%;
+ }

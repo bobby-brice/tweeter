@@ -1,0 +1,18 @@
+.tweet-footer {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 2px solid #545149;
+  margin: 0;
+}
+
+.icons {
+  padding: 5px;
+  display: flex;
+}
+
+i {
+  padding: 5px;
+  font-size: 1rem;
+}

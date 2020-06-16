@@ -1,0 +1,35 @@
+.main-header {
+  height: 400px;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1da1f2;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+}
+
+.header-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet-header {
+  width: 100%;
+  display: flex;
+}
+
+.tweet-header img {
+  height: 60px;
+
+}
+
+.handle {
+  visibility: hidden;
+}
+
+#tweet-container:hover .handle {
+  visibility: visible;
+}
