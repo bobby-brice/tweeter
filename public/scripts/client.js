@@ -59,13 +59,13 @@ $(document).ready(function() {
 
     if (tweetVal === null || tweetVal === "") {
       const input = $('.new-tweet h5');
-      input.text("Please provide some text");
+      input.text("❗Please provide some text ❗");
       input.addClass('validation');
       input.slideDown('slow');
     
     } else if (tweetVal.length > maxLength) {
       const input = $('.new-tweet h5');
-      input.text("You have exceeded the maximum number of characters");
+      input.text("❗You have exceeded the maximum number of characters ❗");
       input.addClass('validation');
       input.slideDown('slow');
 

@@ -40,8 +40,10 @@
  }
 
  .validation {
+   text-align: center;
    height: 45px;
-   margin: 5px;
+   margin: 5px 0 15px 0;
    border: solid red 2px;
    padding: 10px;
+   transition: ease-in;
  }
