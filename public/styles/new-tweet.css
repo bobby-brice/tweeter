@@ -38,3 +38,10 @@
  .new-tweet {
    width: 100%;
  }
+
+ .validation {
+   height: 45px;
+   margin: 5px;
+   border: solid red 2px;
+   padding: 10px;
+ }

@@ -17,7 +17,12 @@ $(document).ready(function() {
   };
 
   const createTweetElement = function(index, tweet) {
-  
+    const escape = function(str) {
+      let div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
     let $tweet = `
     
       <article class="user-tweets">
@@ -29,7 +34,7 @@ $(document).ready(function() {
           </div>
         </header>
 
-        <p>${tweet['content'].text}</p>
+        <p>${escape(tweet['content'].text)}</p>
 
         <footer class="tweet-footer">
           <p>${tweet['created_at']}</p>
@@ -45,20 +50,52 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  // eslint-disable-next-line func-style
+  const validateTweet = function() {
+    let tweetVal = $('#tweet-text').val();
+    const maxLength = 140;
+    
+    let success = false;
+
+    if (tweetVal === null || tweetVal === "") {
+      const input = $('.new-tweet h5');
+      input.text("Please provide some text");
+      input.addClass('validation');
+      input.slideDown('slow');
+    
+    } else if (tweetVal.length > maxLength) {
+      const input = $('.new-tweet h5');
+      input.text("You have exceeded the maximum number of characters");
+      input.addClass('validation');
+      input.slideDown('slow');
+
+    } else {
+      success = true;
+      const input = $('.new-tweet h5');
+      input.text("");
+      input.removeClass('validation');
+    }
+
+    return success;
+  };
+
   $('form').on('submit', function(event) {
     event.preventDefault();
-    const url = `/tweets/`;
-    const data = $(this).serialize();
-    $.ajax({
-      method: 'POST',
-      url,
-      data
-    })
-      .then((res) => { //after a succesful ajax call -> loadTweets which calls the get request again
-        loadTweets();
-      }).fail((err) => console.log(err));
+    if (validateTweet()) {
+      const url = `/tweets/`;
+      const data = $(this).serialize();
+      $.ajax({
+        method: 'POST',
+        url,
+        data
+      })
+        .then((res) => { //after a succesful ajax call -> loadTweets which calls the get request again
+          loadTweets();
+        }).fail((err) => console.log(err));
 
-    $('#tweet-text').val(""); //removes the tweet field
+      $('#tweet-text').val(""); //removes the tweet field
+
+    }
   });
 
   const loadTweets = () => {
