@@ -1,17 +1,8 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-// Fake data taken from initial-tweets.json
 $(document).ready(function() {
  
   const renderTweets = function(tweets) {
     $.each(tweets, (index, tweet) => {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
+    // loops through tweets, calls createTweetElement for each tweet, appends it to the tweets container
       $('#tweet-container').prepend(createTweetElement(index, tweet));
     });
   };
@@ -50,7 +41,7 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  // eslint-disable-next-line func-style
+  //helper function to provide tweet validation
   const validateTweet = function() {
     let tweetVal = $('#tweet-text').val();
     const maxLength = 140;
@@ -65,7 +56,7 @@ $(document).ready(function() {
     
     } else if (tweetVal.length > maxLength) {
       const input = $('.new-tweet h5');
-      input.text("❗You have exceeded the maximum number of characters ❗");
+      input.text("❗Exceeded maximum characters ❗");
       input.addClass('validation');
       input.slideDown('slow');
 
@@ -75,7 +66,6 @@ $(document).ready(function() {
       input.text("");
       input.removeClass('validation');
     }
-
     return success;
   };
 
@@ -89,8 +79,9 @@ $(document).ready(function() {
         url,
         data
       })
-        .then((res) => { //after a succesful ajax call -> loadTweets which calls the get request again
+        .then(() => { //after a succesful ajax call -> loadTweets which calls the get request again
           loadTweets();
+          $('.counter').text("140"); //reset the counter chars to 140
         }).fail((err) => console.log(err));
 
       $('#tweet-text').val(""); //removes the tweet field
@@ -98,6 +89,7 @@ $(document).ready(function() {
     }
   });
 
+  //loadTweets is called in the POST request triggering the below GET request to render new tweets
   const loadTweets = () => {
     const url = `/tweets/`;
 
