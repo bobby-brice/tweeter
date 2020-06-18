@@ -1,11 +1,10 @@
-t
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
-
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
@@ -23,6 +22,8 @@ t
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/90ba6681f7.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment-with-locales.min.js"></script>
+
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -35,37 +36,39 @@ t
     <span class="logo">tweeter</span>
     <span><strong>Write</strong> a new tweet</span>
   </nav>
-  <header class="main-header">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2>Bobby Brice</h2>
-    </div>
-  </header>
+  <div class="primary-container">
+    <header class="main-header">
+      <div>
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+        <h2>Bobby Brice</h2>
+      </div>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <h5></h5>
-      <form class="form-top" action="/tweets/" method="POST" name="tweet-text">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class="below-form">
-          <button class="tweet-btn" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <h5></h5>
+        <form class="form-top" action="/tweets/" method="POST" name="tweet-text">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="below-form">
+            <button class="tweet-btn" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
 
-    <section id="tweet-container">
+      <section id="tweet-container">
 
-    </section>
+      </section>
+  </div>
 
-    <div class="temporary">
+  <div class="temporary">
 
-    </div>
+  </div>
   </main>
 </body>
 

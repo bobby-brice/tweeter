@@ -49,13 +49,8 @@ body {
   box-shadow: 10px 10px 0px 3px
 }
 
-/* #tweet-container article {
-  width: 100%;
-} */
-
 .user-tweets {
-  margin: 15px;
-  padding: 10px 0 10px 0;
+  margin: 15px 0px 15px 0px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -66,6 +61,26 @@ body {
   word-wrap: break-word;
 }
 
+.new-tweet h5 {}
+
 .temporary {
   height: 50vh;
+}
+
+@media only screen and (min-width: 1024px) {
+  .primary-container {
+    display: flex;
+  }
+
+  .main-header {
+    margin: 5%;
+  }
+
+  .new-tweet h5 {
+    margin: 0;
+  }
+
+  .new-tweet {
+    margin-top: 10%;
+  }
 }
