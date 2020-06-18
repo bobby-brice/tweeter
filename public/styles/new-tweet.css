@@ -38,6 +38,7 @@
 
  .new-tweet {
    width: 100%;
+   /* visibility: hidden; */
  }
 
  .validation {

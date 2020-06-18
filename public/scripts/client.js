@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+  $('.new-tweet').hide(); //hides the inital tweet box
  
   const renderTweets = function(tweets) {
     $.each(tweets, (index, tweet) => {
