@@ -6,7 +6,7 @@ Tweeter is a simple, single-page Twitter clone.
 
 !["Landing Page"](https://github.com/bobby-brice/tweeter/blob/master/docs/landingPage.JPG)
 !["New Tweet"](https://github.com/bobby-brice/tweeter/blob/master/docs/newTweet.JPG)
-!["Tablet View"](https://github.com/bobby-brice/tweeter/blob/master/docs/tabletView.JPG)
+!["Tablet View"]()
 
 ## Getting Started
 
