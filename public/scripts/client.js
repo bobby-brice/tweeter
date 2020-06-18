@@ -70,6 +70,7 @@ $(document).ready(function() {
       const input = $('.new-tweet h5');
       input.text("");
       input.removeClass('validation');
+      input.slideUp('slow');
     }
     return success;
   };
