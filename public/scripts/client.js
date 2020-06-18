@@ -21,8 +21,11 @@ $(document).ready(function() {
         <header class="tweet-header">
           <div class="header-top">
             <img src=${tweet['user'].avatars}>
-            <p class="handle">${tweet['user'].handle}</p>
-          </div>
+            <p class="user-name">${tweet['user'].name}</p>
+          </div>  
+            <div class="user-handle">
+              <p class="handle">${tweet['user'].handle}</p>
+            </div>
         </header>
 
         <p>${escape(tweet['content'].text)}</p>
