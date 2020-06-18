@@ -61,10 +61,24 @@ body {
   word-wrap: break-word;
 }
 
-.new-tweet h5 {}
-
 .temporary {
   height: 50vh;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  #main-header {
+    height: 250px;
+  }
+
+  body {
+    font-size: 1.25rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media only screen and (min-width: 1024px) {

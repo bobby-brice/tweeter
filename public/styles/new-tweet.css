@@ -4,6 +4,7 @@
    font-family: 'Bungee';
    padding: 5px 10px 5px 10px;
    margin: 10px;
+   cursor: pointer;
  }
 
  form output {
