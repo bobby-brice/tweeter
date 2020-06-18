@@ -98,4 +98,8 @@ body {
   .new-tweet {
     margin-top: 13%;
   }
+
+  .form-top {
+    margin-top: 5%;
+  }
 }
